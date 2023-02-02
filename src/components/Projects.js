@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/livestreamlytics.PNG";
 import projImg2 from "../assets/img/portfolio.PNG";
-import projImg3 from "../assets/img/cupet.PNG";
+import projImg3 from "../assets/img/cupetv2.PNG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,25 +11,28 @@ export const Projects = () => {
 
   const livestreamlytics = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Web Application",
+      description: "React + Flask + PostgreSQL",
       imgUrl: projImg1,
+      githubUrl: "https://github.com/zihao-xu2096/ChatScrappingBot",
     }
   ];
 
   const portfolio = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Portfolio Website",
+      description: "ReactJS",
       imgUrl: projImg2,
+      githubUrl: "https://github.com/zihao-xu2096/Personal-Portfolio",
     }
   ];
 
   const cupet = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Mobile Application",
+      description: "Android Studio",
       imgUrl: projImg3,
+      githubUrl: "https://github.com/CSC207-UofT/cupet-frontend",
     }
   ];
 
@@ -55,9 +58,9 @@ export const Projects = () => {
                       <Nav.Link eventKey="third">Cupet</Nav.Link>
                     </Nav.Item>
                   </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
+                  <Tab.Content id="slideInUp"className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Tab.Pane eventKey="first" >
+                      <a href="https://github.com/zihao-xu2096/ChatScrappingBot"><Row>
                         {
                           livestreamlytics.map((project, index) => {
                             return (
@@ -69,9 +72,10 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                      </a>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <Row>
+                      <a href="https://github.com/zihao-xu2096/Personal-Portfolio"><Row>
                         {
                           portfolio.map((project, index) => {
                             return (
@@ -83,9 +87,10 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                      </a>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <Row>
+                      <a href="https://github.com/CSC207-UofT/cupet-frontend"><Row>
                         {
                           cupet.map((project, index) => {
                             return (
@@ -97,6 +102,7 @@ export const Projects = () => {
                           })
                         }
                       </Row>
+                      </a>
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
