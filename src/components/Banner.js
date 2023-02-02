@@ -14,13 +14,14 @@ export const Banner = () => {
   const toRotate = [ "Web Developer", "Mobile Developer", "Student" ];
   const period = 2000;
 
+
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  },)
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -58,7 +59,7 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Harry`}</h1>
                 <h1>{`I am a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Mobile Developer", "Student" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am currently a student at the University of Toronto, with an anticipated graduation date of May 2024! I am studying statistics and computer science with an interest in SWE/SDE/SRE roles within Canada/America. Feel free to reach out to me!</p>
+                  <p>I am currently a {index >= 1 ? "student": "student"} at the University of Toronto, with an anticipated graduation date of May 2024! I am studying statistics and computer science with an interest in SWE/SDE/SRE roles within Canada/America. Feel free to reach out to me!</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
